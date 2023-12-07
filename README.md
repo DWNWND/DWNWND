@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Thea</h1>
 <h3 align="center">A passionate frontend developer from Oslo, Norway.</h3>
 
-- 🔭 I’m currently working on [DWNWND]((TBA))
+- 🔭 I’m currently working on [DWNWND]((main))
 - 🌱 I’m currently learning **JavaScript**
 - 👯 I’m looking to collaborate on **new and upcoming projects**
 - 👨‍💻 All of my projects are available at [dwnwnd.com](dwnwnd.com)
