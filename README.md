@@ -1,5 +1,5 @@
 <h1 align="center">Hi, I'm Thea</h1>
-<h3 align="center">A passionate frontend developer from Oslo, Norway</h3>
+<h3 align="center">A passionate frontend developer living on my boat where the wind takes me</h3>
 
 - 🔭 I’m currently working on [DWNWND]((TBA))
 - 🌱 I’m currently learning **JavaScript**
