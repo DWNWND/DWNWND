@@ -20,10 +20,11 @@
       </nav>
     </header>
     <main>
-      <section id="projects">
+      <div id="projects" class="scroll-fix"></div>
+      <section>
         <h1 class="f-helvetica">Projects</h1>
         <div class="projects-wrapper flex">
-          <article class="card f-arial grid">
+          <article class="card rainydays-card f-arial grid not-hover-state">
             <!-- <h2>RAINYDAYS</h2> -->
             <!-- <p>Cross-course project made throughout the first year of my Frontend Dev. studies</p> -->
             <div class="project-img-wrapper flex"><img src="/img/rainydays-logo.png" alt="Rainydays logo" /></div>
@@ -34,7 +35,7 @@
               <a href="https://cms-ca-noroff.netlify.app">link to netlify</a>
             </div> -->
           </article>
-          <article class="card f-arial grid">
+          <article class="card cms-card f-arial grid not-hover-state">
             <!-- <h2>Community Science Museum</h2> -->
             <!-- <p>Semester project for the first semester of my Frontend Dev. studies.</p> -->
             <div class="project-img-wrapper flex"><img src="/img/cms-logo.png" alt="CMS logo" /></div>
@@ -45,7 +46,7 @@
               <a href="https://dainty-pony-7fe7b6.netlify.app">link to netlify</a>
             </div> -->
           </article>
-          <article class="card f-arial grid">
+          <article class="card microtic-card f-arial grid not-hover-state">
             <!-- <h2>Microtic</h2>
             <p>Project exam for first year of my Frontend Dev. studies.</p> -->
             <div class="project-img-wrapper flex"><img src="/img/microtic-logo.png" alt="Microtic logo" /></div>
@@ -62,21 +63,22 @@
         <h1 class="f-helvetica">Stack</h1>
         <div class="qualifications-wrapper flex f-arial">
           <div class="qualifications-icons-wrapper flex">
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-js"></i>
+            <a href="#" class="icon-wrapper flex"><i class="fa-brands fa-css3-alt"></i></a>
+            <a href="#" class="icon-wrapper flex"><i class="fa-brands fa-html5"></i></a>
+            <a href="#" class="icon-wrapper flex"><i class="fa-brands fa-js"></i></a>
           </div>
         </div>
       </section>
       <section id="contact">
         <h1 class="f-helvetica">Contact</h1>
         <div class="contact-icons-wrapper flex">
-          <a href="https://www.linkedin.com/in/thea-oland-b38175139/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/thea-oland-b38175139/" class="icon-wrapper flex"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </section>
     </main>
     <footer class="flex">
-      <div class="logo-wrapper"><img src="/img/dwnwnd-logo-blue.png" alt="logo" /></div>
+      <div class="logo-wrapper"><img src="/img/dwnwnd-logo-white.png" alt="logo" /></div>
     </footer>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
