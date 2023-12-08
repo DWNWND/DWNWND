@@ -115,6 +115,7 @@ section {
   /* max-width: 50vh; */
   box-shadow: 4px 4px 10px 0px #64827e;
   transition: 1s;
+  cursor: pointer;
 }
 /* .rainydays-card:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/img/rainydays-screenshot.png");
@@ -125,12 +126,13 @@ section {
 }
 .microtic-card:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/img/microtic-screenshot.png");
-}
-.card:hover {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
 } */
+.card:hover {
+  border-radius: 30px;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; */
+}
 .project-img-wrapper img {
   width: 30vh;
 }
