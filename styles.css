@@ -9,6 +9,17 @@ body {
 .project-info {
   padding: 1rem;
 }
+.screenshot img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  object-fit: contain;
+}
+#projects h1 {
+  color: #e8efec;
+}
 #contact,
 #qualifications {
   grid-template-columns: 1fr;
@@ -133,10 +144,14 @@ nav a:focus::after {
 }
 
 /* SECTIONS */
+#qualifications,
+#contact {
+  background-color: #e8efec;
+}
 section {
   margin: 0.5rem 1rem;
   padding: 1.5rem;
-  background-color: #e8efec;
+  /* background-color: #e8efec; */
 }
 .projects-wrapper {
   gap: 1.5rem;
@@ -172,19 +187,20 @@ section {
   border-radius: 30px;
   transition: border-radius 2s, opacity 1s linear, height 1s linear;
 }
+.project-links-wrapper i {
+  color: #e8efec;
+}
 .rainydays-card::before {
   background-image: url("/img/rainydays-screenshot.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
-
 }
 .cms-card::before {
   background-image: url("/img/cms-screenshot.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
-
 }
 .microtic-card::before {
   background-image: url("/img/microtic-screenshot.png");
@@ -262,7 +278,7 @@ i:hover {
   }
 }
 @media (min-width: 550px) {
-   .project-img-wrapper img {
+  .project-img-wrapper img {
     width: 40%;
   }
   ul {

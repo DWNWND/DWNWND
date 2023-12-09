@@ -1,25 +1,6 @@
 const cards = document.querySelectorAll(".card");
 const cardInfo = document.querySelectorAll(".card-info");
-
-cardInfo[0].addEventListener("mouseenter", () => {
-  cardInfo[0].classList.add("hover-state");
-  cardInfo[0].innerHTML = `
-  <div class="project-info">
-    <h2>RAINYDAYS</h2>
-    <p>Cross-course project made throughout the first year of my Frontend Dev. studies</p>
-    <div class="project-links-wrapper">
-      <a href="https://github.com/DWNWND/cross-course-CA">link to github</a>
-      <a href="https://cms-ca-noroff.netlify.app">link to netlify</a>
-    </div>
-  </div>`;
-});
-cardInfo[0].addEventListener("mouseleave", () => {
-  cardInfo[0].classList.remove("hover-state");
-  cardInfo[0].classList.add("not-hover-state");
-  cardInfo[0].innerHTML = `
-    <div class="project-img-wrapper flex"><img src="/img/rainydays-logo.png" alt="Rainydays logo" /></div>
-    <p class="project-tag"><b>ecommerce</b></p>`;
-});
+const screenshot = document.querySelectorAll(".screenshot");
 
 cards[0].addEventListener("mouseenter", () => {
   cards[0].classList.add("hover-state");
@@ -28,8 +9,8 @@ cards[0].addEventListener("mouseenter", () => {
     <h2>RAINYDAYS</h2>
     <p>Cross-course project made throughout the first year of my Frontend Dev. studies</p>
     <div class="project-links-wrapper">
-      <a href="https://github.com/DWNWND/cross-course-CA">link to github</a>
-      <a href="https://cms-ca-noroff.netlify.app">link to netlify</a>
+      <a href="https://github.com/DWNWND/cross-course-CA"><i class="fa-brands fa-github"></i></a>
+      <a href="https://cms-ca-noroff.netlify.app"><i class="fa-solid fa-desktop"></i></a>
     </div>
   </div>`;
 });
