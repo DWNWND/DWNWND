@@ -8,7 +8,7 @@ cards[0].addEventListener("mouseenter", () => {
   <div class="project-info">
     <h2>RAINYDAYS</h2>
     <p>Cross-course project made throughout the first year of my Frontend Dev. studies</p>
-    <div class="project-links-wrapper">
+    <div class="project-links-wrapper flex">
       <a href="https://github.com/DWNWND/cross-course-CA"><i class="fa-brands fa-github"></i></a>
       <a href="https://cms-ca-noroff.netlify.app"><i class="fa-solid fa-desktop"></i></a>
     </div>
@@ -27,9 +27,9 @@ cards[1].addEventListener("mouseenter", () => {
   <div class="project-info">
     <h2>Community Science Museum</h2>
     <p>Semester project for the first semester of my Frontend Dev. studies.</p>
-    <div class="project-links-wrapper">
-      <a href="https://github.com/DWNWND/SemesterProject1_Thea-Oland">link to github</a>
-      <a href="https://dainty-pony-7fe7b6.netlify.app">link to netlify</a>
+    <div class="project-links-wrapper flex">
+      <a href="https://github.com/DWNWND/SemesterProject1_Thea-Oland"><i class="fa-brands fa-github"></i></a>
+      <a href="https://dainty-pony-7fe7b6.netlify.app"><i class="fa-solid fa-desktop"></i></a>
     </div>
   </div>`;
 });
@@ -46,9 +46,9 @@ cards[2].addEventListener("mouseenter", () => {
   <div class="project-info">
     <h2>Microtic</h2>
     <p>Project exam for first year of my Frontend Dev. studies.</p>
-    <div class="project-links-wrapper">
-      <a href="https://github.com/DWNWND/project-exam-1-DWNWND">link to github</a>
-      <a href="https://spiffy-halva-4ffb7c.netlify.app">link to netlify</a>
+    <div class="project-links-wrapper flex">
+      <a href="https://github.com/DWNWND/project-exam-1-DWNWND"><i class="fa-brands fa-github"></i></a>
+      <a href="https://spiffy-halva-4ffb7c.netlify.app"><i class="fa-solid fa-desktop"></i></a>
     </div>
   </div>`;
 });

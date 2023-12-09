@@ -111,7 +111,10 @@ p {
 p,
 .project-links-wrapper a {
   font-size: 0.8rem;
-  display: block;
+  /* display: block; */
+}
+.project-links-wrapper {
+  gap: 2rem;
 }
 nav a {
   color: #f5fefa;
@@ -211,7 +214,7 @@ section {
 .card:hover {
   border-radius: 30px;
   transition: border-radius 2s, opacity 2s linear, height 1s linear;
-  height: 25rem;
+  height: 23rem;
 }
 .project-img-wrapper img {
   width: 60%;
