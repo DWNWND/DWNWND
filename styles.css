@@ -44,11 +44,33 @@ body {
 }
 .not-hover-state {
   grid-template-rows: 90% 10%;
+  height: 35vh;
+  border-radius: 40px;
+}
+.not-hover-state .project-info {
+  display: none;
 }
 .hover-state {
   grid-template-rows: auto;
-  /* justify-content: space-evenly; */
   align-content: end;
+  height: 28rem;
+  border-radius: 0 0 40px 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.hover-state .project-img-wrapper,
+.hover-state .project-tag {
+  display: none;
+}
+.hover-state.rainydays-card {
+  background-image: url("/img/rainydays-screenshot.png"), linear-gradient(to right, hsl(198, 25%, 41%), hsl(178, 15%, 61%));
+}
+.hover-state.cms-card {
+  background-image: url("/img/cms-screenshot.png"), linear-gradient(to right, hsl(198, 25%, 41%), hsl(178, 15%, 61%));
+}
+.hover-state.microtic-card {
+  background-image: url("/img/microtic-screenshot.png"), linear-gradient(to right, hsl(198, 25%, 41%), hsl(178, 15%, 61%));
 }
 .hover-state h2 {
   margin: 0;
@@ -56,9 +78,9 @@ body {
 .hover-state .project-links-wrapper a {
   text-transform: uppercase;
 }
-/* .project-links-wrapper {
- padding-bottom: 3rem;
-} */
+.project-links-wrapper a {
+  width: 2rem;
+}
 .sticky {
   position: fixed;
   top: 0;
@@ -111,10 +133,9 @@ p {
 p,
 .project-links-wrapper a {
   font-size: 0.8rem;
-  /* display: block; */
 }
 .project-links-wrapper {
-  gap: 2rem;
+  gap: 2.1rem;
 }
 nav a {
   color: #f5fefa;
@@ -162,59 +183,14 @@ section {
 .card {
   color: white;
   padding: 1rem;
-  height: 25vh;
+  /* height: 35vh; */
   box-shadow: 4px 4px 10px 0px #64827e;
   cursor: pointer;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   transition: border-radius 2s, height 1s linear;
   position: relative;
   background-image: linear-gradient(to right, hsl(198, 25%, 41%), hsl(178, 15%, 61%));
   z-index: 1;
-}
-/* https://css-tricks.com/almanac/properties/t/transition/ */
-.card::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  /* background-image: linear-gradient(to bottom, hsl(237, 14%, 48%), hsl(217, 22%, 62%)); */
-  z-index: -1;
-  opacity: 0;
-  border-radius: 40px;
-  transition: border-radius 2s, opacity 1s linear, height 1s linear;
-}
-.card:hover::before {
-  opacity: 1;
-  border-radius: 30px;
-  transition: border-radius 2s, opacity 1s linear, height 1s linear;
-}
-.project-links-wrapper i {
-  color: #e8efec;
-}
-.rainydays-card::before {
-  background-image: url("/img/rainydays-screenshot.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.cms-card::before {
-  background-image: url("/img/cms-screenshot.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.microtic-card::before {
-  background-image: url("/img/microtic-screenshot.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.card:hover {
-  border-radius: 30px;
-  transition: border-radius 2s, opacity 2s linear, height 1s linear;
-  height: 23rem;
 }
 .project-img-wrapper img {
   width: 60%;
@@ -239,7 +215,7 @@ img {
 }
 i {
   font-size: 2rem;
-  color: #64827e;
+  color: rgb(194, 210, 208);
   transition: 0.3s;
 }
 i:hover {
@@ -262,6 +238,9 @@ i:hover {
 .logo-wrapper img {
   width: 100%;
 }
+/* .project-img-wrapper {
+  height: 10rem;
+} */
 @media (min-width: 390px) {
   .contact-icons-wrapper,
   .qualifications-icons-wrapper {
@@ -276,16 +255,78 @@ i:hover {
   .qualifications-icons-wrapper {
     margin: 0;
   }
-  .card {
+  /* .card {
     height: 35vh;
+  } */
+  .hover-state {
+    height: 30rem;
   }
 }
+/* @media (min-width: 450px) {
+  .hover-state.rainydays-card {
+    background-image: url("/img/rainydays-screenshot.png"), linear-gradient(to right, hsl(198, 25%, 41%), hsl(178, 15%, 61%));
+  }
+  .hover-state.cms-card {
+    background-image: url("/img/cms-screenshot.png"), linear-gradient(to right, hsl(198, 25%, 41%), hsl(178, 15%, 61%));
+  }
+  .hover-state.microtic-card {
+    background-image: url("/img/microtic-screenshot.png"), linear-gradient(to right, hsl(198, 25%, 41%), hsl(178, 15%, 61%));
+  }
+} */
 @media (min-width: 550px) {
   .project-img-wrapper img {
     width: 40%;
   }
   ul {
     justify-content: flex-start;
+  }
+}
+@media (hover: hover) {
+  /* https://css-tricks.com/almanac/properties/t/transition/ */
+  .card::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-image: linear-gradient(to bottom, hsl(237, 14%, 48%), hsl(217, 22%, 62%)); */
+    z-index: -1;
+    opacity: 0;
+    border-radius: 40px;
+    transition: border-radius 2s, opacity 1s linear, height 1s linear;
+  }
+  .card:active::before,
+  .card:hover::before {
+    opacity: 1;
+    border-radius: 30px;
+    transition: border-radius 2s, opacity 1s linear, height 1s linear;
+  }
+  .project-links-wrapper i {
+    color: #e8efec;
+  }
+  .rainydays-card::before {
+    background-image: url("/img/rainydays-screenshot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .cms-card::before {
+    background-image: url("/img/cms-screenshot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .microtic-card::before {
+    background-image: url("/img/microtic-screenshot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .card:hover {
+    border-radius: 30px;
+    transition: border-radius 2s, opacity 2s linear, height 1s linear;
+    height: 28rem;
   }
 }
 @media (min-width: 850px) {
@@ -296,7 +337,7 @@ i:hover {
     padding: 1.5rem;
   }
   .card {
-    height: 15rem;
+    height: 18rem;
   }
   .contact-qualifications-sections,
   #contact,
