@@ -18,8 +18,7 @@ function cardClosed(target) {
   target.classList.add("card-closed");
 }
 
-// https://stackoverflow.com/questions/13966914/can-mouseenter-and-click-event-exist-together
-// this logic will no longer cause a conflict between desktop and mobile
+// The following code to eliminate conflict between eventlisteneres on desktop and mobile is inspired by:https://stackoverflow.com/questions/13966914/can-mouseenter-and-click-event-exist-together
 
 //RAINYDAYS
 rainydaysCard.addEventListener(
