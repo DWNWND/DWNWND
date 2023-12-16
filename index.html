@@ -5,75 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <meta name="description" content="My Portfolio" />
-    <link rel="icon" href="#" />
+    <link rel="icon" href="/img/wind-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/279950e6bf.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="sticky">
-      <nav>
-        <ul class="flex f-impact">
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#qualifications-contact">stack</a></li>
-          <li><a href="#qualifications-contact">contact</a></li>
-        </ul>
-      </nav>
+      <div class="header-text f-helvetica text-align-center">Thea</div>
+      <div class="header-tagline f-arial text-align-center">web development</div>
     </header>
     <main>
-      <div id="qualifications-contact" class="scroll-fix"></div>
       <div class="grid contact-qualifications-sections">
-        <section id="qualifications" class="grid">
+        <section class="grid qualifications-section">
           <h1 class="f-helvetica">Stack</h1>
-          <div class="qualifications-wrapper flex f-arial">
-            <div class="qualifications-icons-wrapper flex">
-              <a href="#" class="icon-wrapper flex"><i class="fa-brands fa-css3-alt"></i></a>
-              <a href="#" class="icon-wrapper flex"><i class="fa-brands fa-html5"></i></a>
-              <a href="#" class="icon-wrapper flex"><i class="fa-brands fa-js"></i></a>
+            <div class="topsection-icons-wrapper flex">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="icon-wrapper flex"><i class="fa-brands fa-css3-alt"></i></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" class="icon-wrapper flex"><i class="fa-brands fa-html5"></i></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript" class="icon-wrapper flex"><i class="fa-brands fa-js"></i></a>
             </div>
-          </div>
         </section>
-        <section id="contact" class="grid">
+        <section class="grid contact-section">
           <h1 class="f-helvetica">Contact</h1>
-          <div class="contact-icons-wrapper flex">
-            <a href="#" class="icon-wrapper flex"><i class="fa-solid fa-envelope"></i></a>
+          <div class="topsection-icons-wrapper flex">
+            <a href="mailto:thea.ol@hotmail.com" class="icon-wrapper flex"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/thea-oland-b38175139/" class="icon-wrapper flex"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </section>
       </div>
-      <section id="projects">
+      <section class="projects-section">
         <h1 class="f-helvetica">Projects</h1>
         <div class="projects-wrapper flex">
-          <article class="card rainydays-card f-arial grid not-hover-state">
-            <div class="project-img-wrapper flex"><img src="/img/rainydays-logo.png" alt="Rainydays logo" /></div>
+          <article class="project-card rainydays-card f-arial grid card-closed">
+            <div class="project-logo-wrapper flex"><img src="/img/rainydays-logo.png" alt="Rainydays logo" /></div>
             <p class="project-tag"><b>ecommerce</b></p>
+            <div class="screenshot flex"><img src="/img/rainydays-screenshot.png" alt="screenshot of the Rainydays homepage" /></div>
             <div class="project-info">
               <h2>RAINYDAYS</h2>
               <p>This site was made as a cross-course project that we worked on throughout the first year of my studies. It's an ecommerce site selling rainjackets. Read more about the project in my Github Repository.</p>
-              <div class="project-links-wrapper flex">
+              <div class="project-icons-wrapper flex">
                 <a href="https://github.com/DWNWND/cross-course-CA" class="icon-wrapper flex"><i class="fa-brands fa-github"></i></a>
                 <a href="https://cms-ca-noroff.netlify.app" class="icon-wrapper flex"><i class="fa-solid fa-link"></i></a>
               </div>
             </div>
           </article>
-          <article class="card cms-card f-arial grid not-hover-state">
-            <div class="project-img-wrapper flex"><img src="/img/cms-logo.png" alt="CMS logo" /></div>
+          <article class="project-card cms-card f-arial grid card-closed">
+            <div class="project-logo-wrapper flex"><img src="/img/cms-logo.png" alt="CMS logo" /></div>
             <p class="project-tag"><b>buisness landingpage</b></p>
+            <div class="screenshot flex"><img src="/img/cms-screenshot.png" alt="screenshot of the CMS homepage" /></div>
             <div class="project-info">
               <h2>Community Science Museum</h2>
               <p>This is what i delivered as my semester project for the first semester of my studies. It's a informative site for a Sience Museum. Read more about the project in my Github Repository.</p>
-              <div class="project-links-wrapper flex">
+              <div class="project-icons-wrapper flex">
                 <a href="https://github.com/DWNWND/SemesterProject1_Thea-Oland" class="icon-wrapper flex"><i class="fa-brands fa-github"></i></a>
                 <a href="https://dainty-pony-7fe7b6.netlify.app" class="icon-wrapper flex"><i class="fa-solid fa-link"></i></a>
               </div>
             </div>
           </article>
-          <article class="card microtic-card f-arial grid not-hover-state">
-            <div class="project-img-wrapper flex"><img src="/img/microtic-logo.png" alt="Microtic logo" /></div>
+          <article class="project-card microtic-card f-arial grid card-closed">
+            <div class="project-logo-wrapper flex"><img src="/img/microtic-logo.png" alt="Microtic logo" /></div>
             <p class="project-tag"><b>commercial blog</b></p>
+            <div class="screenshot flex"><img src="/img/microtic-screenshot.png" alt="screenshot of the Microtic homepage" /></div>
             <div class="project-info">
               <h2>Microtic</h2>
               <p>This is what i delivered for my project exam for first year of my studies. It's a blog site about unconventional living. Read more about the project in my Github Repository.</p>
-              <div class="project-links-wrapper flex">
+              <div class="project-icons-wrapper flex">
                 <a href="https://github.com/DWNWND/project-exam-1-DWNWND" class="icon-wrapper flex"><i class="fa-brands fa-github"></i></a>
                 <a href="https://spiffy-halva-4ffb7c.netlify.app" class="icon-wrapper flex"><i class="fa-solid fa-link"></i></a>
               </div>
@@ -82,9 +77,6 @@
         </div>
       </section>
     </main>
-    <footer class="flex">
-      <!-- <div class="logo-wrapper"><img src="/img/dwnwnd-logo-white.png" alt="logo" /></div> -->
-    </footer>
     <script type="module" src="script.js"></script>
   </body>
 </html>
