@@ -2,7 +2,7 @@
 <h3 align="center">A passionate frontend developer from Oslo, Norway.</h3>
 
 - 🔭 I’m currently working on [JS2-CA]((main))
-- 🌱 I’m currently learning **CSS Frameworks**
+- 🌱 I’m currently learning **restful API**
 - 👯 I’m looking to collaborate on **new and upcoming projects**
 - 👨‍💻 All of my projects are available at [dwnwnd.com](dwnwnd.com)
 - 💬 Ask me about **where i am**
