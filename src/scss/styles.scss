@@ -1,10 +1,14 @@
+// Bootstrap main file
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 body {
   margin: 0;
-  background-color: #b0c5c4;
-}
-main {
+  background-color: #ffff;
   padding-top: 1rem;
 }
+// main {
+//   padding-top: 1rem;
+// }
 section {
   margin: 0.5rem 1rem;
   padding: 1.5rem;
@@ -24,23 +28,91 @@ img {
 
 /* HEADER */
 header {
-  background-color: #315258;
+  background: center / cover no-repeat url("/img/background_header.svg");
   z-index: 10;
   padding: 1rem;
-  box-shadow: 4px 4px 10px 0px #a1b0ae;
+  height: 30vw;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
-.header-text {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #d8eded;
-  margin-bottom: 0.5rem;
+
+.header-logo-container {
+  width: 70vw;
+  max-width: 900px;
+  padding-top: 4rem;
 }
+
+.header-logo-container img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header-tagline {
-  color: #f5fefa;
+  color: #012c3f;
+  font-weight: 200;
+  text-transform: uppercase;
 }
-.sticky {
-  position: sticky;
-  top: 0;
+
+// NAV
+nav {
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
+
+  @include media-breakpoint-up(sm) {
+    gap: 2rem;
+  }
+}
+nav li {
+  list-style: none;
+  font-weight: 200;
+}
+
+// SECTIONS
+section {
+  margin: 0;
+}
+section.big-quote {
+  background: center / cover no-repeat url("/img/background_launch-test.png");
+  min-height: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.big-quote blockquote {
+  color: #f5fefa;
+  font-size: 3rem;
+  margin: 0;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 5rem;
+  }
+}
+
+section.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #e8efec;
+  padding: 5rem 0;
+}
+
+section.services h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  color: #d8e2df;
 }
 
 /* GLOBAL TEXT STYLING */
@@ -55,7 +127,9 @@ a {
 }
 .f-helvetica {
   font-family: Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+}
+.f-vidaloka {
+  font-family: "Vidaloka", serif;
 }
 h1 {
   font-weight: 800;
@@ -193,9 +267,9 @@ i {
   }
 }
 @media (min-width: 850px) {
-  main {
-    padding: 1.5rem;
-  }
+  // main {
+  //   padding: 1.5rem;
+  // }
   section {
     margin: 0;
   }
@@ -223,12 +297,6 @@ i {
   }
 }
 @media (min-width: 1500px) {
-  section {
-    padding: 2rem;
-  }
-  main {
-    padding: 5rem;
-  }
   .projects-wrapper,
   .topsection-icons-wrapper,
   .project-icons-wrapper {
