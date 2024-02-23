@@ -11844,19 +11844,20 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
 body {
   margin: 0;
   background-color: white;
-  padding-top: 1rem;
-}
-
-section {
-  margin: 0.5rem 1rem;
-  padding: 1.5rem;
 }
 
 img {
-  object-fit: contain;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* DISPLAY */
@@ -11871,10 +11872,14 @@ img {
 
 /* HEADER */
 header {
-  background: center/cover no-repeat url("/img/background_header.svg");
+  height: 100vh;
+}
+
+header .header {
+  background: top/cover no-repeat url("/img/background_header.svg");
   z-index: 10;
   padding: 1rem;
-  height: 30vw;
+  height: 47.5vh;
   min-height: 15rem;
   display: flex;
   flex-direction: column;
@@ -11884,7 +11889,7 @@ header {
 }
 
 .header-logo-container {
-  width: 70vw;
+  width: 40vw;
   max-width: 900px;
   padding-top: 4rem;
 }
@@ -11900,11 +11905,20 @@ header {
   text-transform: uppercase;
 }
 
-nav {
+header nav {
   background-color: white;
+  height: 5vh;
 }
 
-nav ul {
+footer nav a {
+  color: white !important;
+}
+
+footer nav ul {
+  flex-direction: row;
+}
+
+header nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11913,8 +11927,13 @@ nav ul {
   margin: 0;
 }
 @media (min-width: 576px) {
-  nav ul {
+  header nav ul {
     gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  header nav ul {
+    gap: 4rem;
   }
 }
 
@@ -11923,13 +11942,38 @@ nav li {
   font-weight: 200;
 }
 
+a {
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav a:after {
+  background: #2f2d2d;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 section {
   margin: 0;
 }
 
 section.big-quote {
   background: center/cover no-repeat url("/img/background_launch-test.png");
-  min-height: 25vw;
+  height: 47.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11946,25 +11990,95 @@ section.big-quote blockquote {
   }
 }
 
-section.services {
+section,
+footer .center-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  padding: 4rem 0;
+}
+
+section h1, section .h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+section.services {
   background-color: #e8efec;
-  padding: 5rem 0;
+  height: 95vh;
 }
 
 section.services h1, section.services .h1 {
-  text-transform: uppercase;
-  font-size: 5rem;
   color: #d8e2df;
+}
+
+section.services h2, section.services .h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+section.services .col {
+  color: #012c3f;
+}
+
+section.services p,
+section.services h2,
+section.services .h2 {
+  margin: 0;
+}
+
+div .work-img {
+  height: 47.5vh;
+}
+
+section.projects {
+  height: 95vh;
+  background-color: #f5eee3;
+}
+
+section.projects h1, section.projects .h1 {
+  color: #dddbd3;
+}
+
+section.contact {
+  background-color: #b9cdcc;
+  height: 95vh;
+}
+
+section.contact h1, section.contact .h1 {
+  color: #759092;
+}
+
+footer {
+  background-color: #012c3f;
+  height: 80vh;
+  position: relative;
+}
+
+footer .row {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer .footer-logo {
+  width: 25vw;
+}
+
+footer .powered-by {
+  color: #bfd0db;
+  font-weight: 200;
+  text-transform: uppercase;
 }
 
 /* GLOBAL TEXT STYLING */
 .text-align-center {
   text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 a {
@@ -11997,143 +12111,6 @@ p {
   font-size: 0.8rem;
 }
 
-i {
-  font-size: 2rem;
-  transition: 0.3s;
-}
-
-.icon-wrapper {
-  height: 40px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-}
-
-/* STACK- AND CONTACT SECTION */
-.contact-qualifications-sections h1, .contact-qualifications-sections .h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.contact-qualifications-sections h1, .contact-qualifications-sections .h1,
-.contact-qualifications-sections i {
-  color: #597271;
-}
-
-.qualifications-section,
-.contact-section {
-  grid-template-columns: 1fr;
-  background-color: #f5f7f6;
-}
-
-.topsection-icons-wrapper {
-  justify-content: flex-start;
-}
-
-.topsection-icons-wrapper {
-  margin-bottom: 1.5rem;
-  gap: 1rem;
-}
-
-/* PROJECTS SECTION */
-.projects-section {
-  height: 32rem;
-}
-
-.projects-section h1, .projects-section .h1 {
-  font-size: 2.5rem;
-  color: #f5fefa;
-}
-
-.projects-wrapper {
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.project-card .flex {
-  align-content: center;
-  justify-content: center;
-}
-
-.project-card h2, .project-card .h2 {
-  margin: 0;
-}
-
-.project-card {
-  color: white;
-  padding: 1rem;
-  box-shadow: 4px 4px 10px 0px #64827e;
-  cursor: pointer;
-  position: relative;
-  background-image: linear-gradient(to right, hsl(192, 33%, 29%), hsl(178, 15%, 61%));
-  z-index: 1;
-}
-
-.card-closed {
-  grid-template-rows: 90% 10%;
-  height: 35vh;
-  border-radius: 40px;
-}
-
-.card-open {
-  grid-template-rows: auto;
-  border-radius: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.card-closed .project-info,
-.card-closed .screenshot,
-.card-open .project-logo-wrapper,
-.card-open .project-tag {
-  display: none;
-}
-
-.project-logo-wrapper img {
-  width: 60%;
-}
-
-.project-tag {
-  align-self: end;
-  margin: 0;
-  text-align: center;
-  color: #d6e3eb;
-  font-size: 1rem;
-}
-
-.project-info {
-  padding: 1rem;
-}
-
-.screenshot img {
-  width: 100%;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
-  border-bottom-right-radius: 20px;
-  border: rgb(194, 210, 208) solid 3px;
-}
-
-.project-icons-wrapper {
-  gap: 1rem;
-}
-
-@media (min-width: 390px) {
-  .topsection-icons-wrapper {
-    justify-content: flex-end;
-  }
-  .contact-qualifications-sections h1, .contact-qualifications-sections .h1,
-  .topsection-icons-wrapper {
-    margin: 0;
-  }
-  .qualifications-section,
-  .contact-section {
-    grid-template-columns: 1fr 1fr;
-  }
-  .projects-section h1, .projects-section .h1 {
-    font-size: 4rem;
-  }
-}
 @media (min-width: 550px) {
   .project-logo-wrapper img {
     width: 40%;
@@ -12142,109 +12119,6 @@ i {
 @media (min-width: 850px) {
   section {
     margin: 0;
-  }
-  .contact-qualifications-sections,
-  .qualifications-section,
-  .contact-section {
-    gap: 1.5rem;
-  }
-  .contact-qualifications-sections {
-    margin-bottom: 1.5rem;
-    grid-template-columns: 1fr 1fr;
-  }
-  .projects-wrapper {
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .project-logo-wrapper img {
-    width: 15vh;
-  }
-}
-@media (min-width: 1200px) {
-  .project-logo-wrapper img {
-    width: 20vh;
-  }
-}
-@media (min-width: 1500px) {
-  .projects-wrapper,
-  .topsection-icons-wrapper,
-  .project-icons-wrapper {
-    gap: 2rem;
-  }
-  i {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1900px) {
-  .card-closed {
-    height: 20vh;
-  }
-  .project-logo-wrapper img {
-    width: 15vh;
-  }
-}
-@media (hover: hover) {
-  i:hover {
-    font-size: 2.5rem;
-    color: #38504c;
-  }
-  /* The following code to get the right "hover"-effect and transition is inspired by: https://css-tricks.com/almanac/properties/t/transition/ */
-  .card-open {
-    align-items: end;
-  }
-  .project-card::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    border-radius: 40px;
-    transition: opacity 1s linear, height 1s linear;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
-  .project-card:active::before,
-  .project-card:hover::before {
-    opacity: 1;
-    transition: opacity 1s linear, height 1s linear;
-  }
-  .project-icons-wrapper i {
-    color: #e8efec;
-  }
-  .rainydays-card::before {
-    background-image: url("/img/rainydays-screenshot.png");
-  }
-  .cms-card::before {
-    background-image: url("/img/cms-screenshot.png");
-  }
-  .microtic-card::before {
-    background-image: url("/img/microtic-screenshot.png");
-  }
-  .project-card:hover {
-    transition: opacity 2s linear, height 1s linear;
-    height: 28rem;
-  }
-  .project-info {
-    background-color: #315258;
-    border-top-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-    border-bottom-left-radius: 35px;
-    padding: 2rem;
-  }
-}
-@media (hover: hover) and (min-width: 850px) {
-  .project-card:hover {
-    height: 30rem;
-  }
-}
-@media (hover: hover) and (min-width: 1500px) {
-  i:hover {
-    font-size: 3.5rem;
   }
 }
 
