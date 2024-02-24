@@ -27,9 +27,9 @@
     <header>
       <div class="header">
         <div class="header-tagline f-helvetica text-align-center"><span class="name">down wind</span></div>
-        <div class="header-logo-container desktop"><img src="/img/logo_downwind_spaced_gray_innershadow.svg" alt="" class="img-fluid" /></div>
+        <div class="header-logo-container desktop"><img src="/img/logo_downwind_tight_gray_innershadow.svg" alt="" class="img-fluid" /></div>
         <div class="header-logo-container mobile"><img src="/img/logo_d_gray_innershadow.svg" alt="" class="img-fluid" /></div>
-        <div class="header-tagline f-helvetica text-align-center"><span class="webdev">web development</span>A personal and professional hands-on approach to web design and development.</div>
+        <div class="header-tagline f-helvetica text-align-center"><span class="webdev">web development</span>A personal and professional hands-on approach to web development.</div>
       </div>
       <section class="big-quote">
         <div class="typewriter"><blockquote class="f-vidaloka">Lets launch your ideas today!</blockquote></div>
@@ -38,13 +38,24 @@
     <main>
       <section class="services f-helvetica" id="services">
         <h1>Services</h1>
-        <div class="container text-align-center">
-          <p>Be sure to get a functional and finished product which is yours to have and hold, without being locked to subscriptions and expensive DIY website block builders.</p>
-          <p>With me you'll get full access to your projects from start to finish. You'll be able to follow up on the evolvement of your project throughout the designing and during the build. With a first row directors seat you'll be able to stear your project to become exactly how you want it without you needing to have any in depth knowledge of design og web development.</p>
-          <p>After your project is up and running I'll still be within reach for you to get the help and updates needed</p>
+        <div class="container">
+          <p class="bigger text-align-center">Get a functional and finished website which is <span class="underline">yours only</span>,<span class="break"> without being locked to expensive DIY website builders and subscriptions.</span></p>
         </div>
-        <div class="container text-align-center">
+        <div class="container list-container reveal">
+          <ul>
+            <li><p>Full access to your projects from start to finish.</p></li>
+            <li><p>Personal involvement throughout the build.</p></li>
+            <li><p>Always professional experise within reach.</p></li>
+          </ul>
+        </div>
+        <div class="container">
+          <p class="text-align-center">With first row directors seat you'll be able to stear your project to become <strong>exactly how you want it,</strong> <span class="break">without needing to have any in depth knowledge of design or web development.</span></p>
+        </div>
+        <!-- <div class="container text-align-center">
           <p>I'm here to help you make your vision come to life.</p>
+        </div> -->
+        <div class="container text-align-center">
+          <a href="#projects"> <button type="button" class="btn btn-primary">check out my portfolio</button></a>
         </div>
       </section>
       <section class="bullets f-helvetica">
@@ -79,7 +90,51 @@
         <img src="/img/amb_logo_smaller.png" alt="" class="work-img" />
       </div>
       <section class="projects" id="projects">
-        <h1>Projects</h1>
+        <div class="container">
+          <h1 class="text-align-center">Projects</h1>
+          <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="project-col col-sm-6 col-lg-4 mb-4">
+              <div class="card">
+                <div class="img-container">
+                  <a href="#"><img src="/img/project_andrea_og_torjus.svg" alt="" class="img-fluid" /></a>
+                </div>
+                <p class="small-tagline text-align-center">wedding invitation</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <div class="card">
+                <div class="img-container">
+                  <a href="#"><img src="/img/project_levital.svg" alt="" class="img-fluid" /></a>
+                </div>
+                <p class="small-tagline text-align-center">buisness landing page</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <div class="card">
+                <div class="img-container">
+                  <a href="#"><img src="/img/project_microtic.svg" alt="" class="img-fluid" /></a>
+                </div>
+                <p class="small-tagline text-align-center">commercial blog</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <div class="card">
+                <div class="img-container">
+                  <a href="#"><img src="/img/project_onboard_fitness.svg" alt="" class="img-fluid" /></a>
+                </div>
+                <p class="small-tagline text-align-center">buisness landing page</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <div class="card">
+                <div class="img-container">
+                  <a href="#"><img src="/img/project_cms.svg" alt="" class="project-link-img img-fluid" /></a>
+                </div>
+                <p class="small-tagline text-align-center">buisness landing page</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="contact" id="contact">
         <h1>Contact</h1>
@@ -112,4 +167,5 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </html>
