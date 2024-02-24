@@ -1,6 +1,7 @@
 // Bootstrap main file
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "typewriter.scss";
+@import "reveal.scss";
 
 .mobile {
   display: inline-block;
@@ -84,11 +85,14 @@ header .header {
 header .header-logo-container {
   width: 30vw;
   max-width: 900px;
-  padding-top: 4rem;
 
   @include media-breakpoint-up(sm) {
     width: 60vw;
   }
+}
+
+header .header-logo-container.desktop {
+  padding-top: 4rem;
 }
 
 header .header-logo-container img {
@@ -100,13 +104,21 @@ header .header-tagline {
   // color: #012c3f;
   color: #534f48;
   font-weight: 200;
-  text-transform: uppercase;
 }
 
-header .header-tagline span {
+header .header-tagline .webdev {
   display: block;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+header .header-tagline .name {
+  font-size: 1.5rem;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 
   @include media-breakpoint-up(sm) {
     display: none;
@@ -192,7 +204,19 @@ footer a:after {
 // SECTIONS
 section {
   margin: 0;
+  gap: 2rem;
 }
+
+section.services {
+  height: 100vh;
+}
+section.projects {
+  height: 100vh;
+}
+section.contact {
+  height: 100vh;
+}
+
 section.big-quote {
   background: center / cover no-repeat url("/img/background_launch-test.png");
   height: 30vh;
@@ -236,12 +260,6 @@ footer .center-container {
 section,
 footer .center-container {
   flex-direction: column;
-  padding: 4rem 0;
-}
-
-section {
-  gap: 2rem;
-  height: 100vh;
 }
 
 section h1 {
@@ -261,18 +279,50 @@ section.services h1 {
   color: #d8e2df;
 }
 
-section.services h2 {
+section.bullets {
+  padding: 2rem 0;
+
+  @include media-breakpoint-up(sm) {
+    padding: 4rem 0;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 8rem 0;
+  }
+}
+section.bullets h2 {
   font-size: 1rem;
   font-weight: 600;
 }
 
-section.services .col {
+section.bullets .col {
   color: #012c3f;
+  padding: 1.5rem;
+  background-color: white;
+  z-index: 9;
+
+  @include media-breakpoint-up(sm) {
+    min-width: 250px;
+  }
 }
 
-section.services p,
-section.services h2 {
+section.bullets h2 {
+  margin-bottom: 0.7rem;
+  text-decoration: underline;
+  color: #494134;
+  font-size: 1.3rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+  }
+}
+section.bullets p {
   margin: 0;
+  color: #494134;
+}
+
+section.bullets {
+  background-color: #f5eee3;
+  // border: solid 1rem white;
 }
 
 div .work-img {
