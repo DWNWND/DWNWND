@@ -1,6 +1,10 @@
+.typewriter {
+  margin-top: 2.5vh;
+}
+
 .typewriter blockquote {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.05em solid rgb(0, 0, 0); /* The typwriter cursor */
+  border-right: 0.05em solid #494134; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   // letter-spacing: 0.15em; /* Adjust as needed */
@@ -24,6 +28,6 @@
     border-color: transparent;
   }
   50% {
-    border-color: rgb(0, 0, 0);
+    border-color: #494134;
   }
 }
