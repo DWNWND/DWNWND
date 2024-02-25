@@ -4,6 +4,8 @@ const width = window.innerWidth;
 const mainMenu = document.querySelector(".mainmenu");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const checkbox = document.querySelector("#dropdown");
+const contactNav = document.querySelector("#contactBtn");
+const projectsNav = document.querySelector("#projectsBtn");
 
 function hamburgerMenuOnScroll() {
   const currentScrollPos = window.scrollY;
@@ -36,12 +38,22 @@ if (width <= 576) {
   hamburgerMenuOnScroll();
   scrollListener();
 }
+if (width >= 576) {
+  console.log("ok")
+  contactNav.classList.add("main-nav-links");
+  projectsNav.classList.add("main-nav-links");
+}
+
 
 window.addEventListener("resize", () => {
   const widthOp = window.innerWidth;
   if (widthOp <= 576) {
     hamburgerMenuOnScroll();
     scrollListener();
+  }
+  if (widthOp >= 576) {
+    contactNav.classList.add(".main-nav-links");
+    projectsNav.classList.add(".main-nav-links");
   }
 });
 
