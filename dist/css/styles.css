@@ -1,4 +1,42 @@
 @charset "UTF-8";
+.typewriter blockquote {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.05em solid #494134; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #494134;
+  }
+}
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -11844,46 +11882,50 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.typewriter {
-  margin-top: 2.5vh;
+.hamburger-menu {
+  display: none;
+  box-shadow: 4px 4px 4px rgba(73, 65, 52, 0.1294117647);
 }
 
-.typewriter blockquote {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.05em solid #494134; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+.dropdown {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #494134;
-  }
-}
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 2s all ease;
+.hamburger {
+  align-self: flex-end;
 }
 
-.reveal.active {
-  transform: translateY(0);
+label {
+  cursor: pointer;
+}
+
+input[type=checkbox] + label .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #cccccc;
+  margin: 4px;
+  transition: all 0.2s;
+}
+input[type=checkbox] + label .top-bar {
+  transform: rotate(0);
+}
+input[type=checkbox] + label .middle-bar {
   opacity: 1;
+}
+
+input[type=checkbox]:checked + label .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+input[type=checkbox]:checked + label .middle-bar {
+  opacity: 0;
+}
+input[type=checkbox]:checked + label .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
 }
 
 .margin-center-align {
@@ -11921,12 +11963,12 @@ textarea.form-control-lg {
   background-color: white;
   z-index: 10;
 }
-
 .absolute {
   position: absolute;
   width: 100%;
   height: 85%;
-  top: 67.5vh;
+  top: 350px;
+  z-index: 1;
 }
 @media (min-width: 576px) {
   .absolute {
@@ -11955,12 +11997,13 @@ img {
 /* HEADER */
 header {
   min-height: 100vh;
+  display: grid;
 }
 
 header .header {
   z-index: 10;
   padding: 1rem;
-  height: 70vh;
+  height: 350px;
   min-height: 15rem;
   gap: 2rem;
 }
@@ -11972,11 +12015,12 @@ header .header {
 
 header .header-logo-container {
   width: 30vw;
-  max-width: 900px;
+  max-width: 100px;
 }
 @media (min-width: 576px) {
   header .header-logo-container {
     width: 40vw;
+    max-width: 900px;
   }
 }
 
@@ -12013,21 +12057,47 @@ nav li {
   list-style: none;
   font-weight: 200;
   width: auto;
+  white-space: nowrap;
 }
 
-nav.header ul {
+.mainmenu {
+  transition: opacity 1s linear;
+}
+
+.mainmenu li {
+  width: 130px;
+}
+
+.mainmenu .submenu li {
+  text-align: center;
+}
+
+nav.header ul.mainmenu {
   align-items: center;
   gap: 1rem;
+  flex-direction: column;
 }
 @media (min-width: 576px) {
-  nav.header ul {
-    gap: 2rem;
+  nav.header ul.mainmenu {
+    gap: 1rem;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  nav.header ul.mainmenu {
+    justify-content: center;
   }
 }
 @media (min-width: 992px) {
-  nav.header ul {
+  nav.header ul.mainmenu {
     gap: 3rem;
   }
+}
+
+nav.header ul.submenu {
+  flex-direction: column;
 }
 
 footer nav ul {
@@ -12048,13 +12118,35 @@ footer nav .fl-left a {
   clear: left;
 }
 
+@media (hover) {
+  .main-nav-links:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .main-nav-links:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  .sub-nav-link:hover {
+    font-weight: 400;
+  }
+  footer a:after {
+    background: #ffffff;
+  }
+}
 a {
   letter-spacing: 0.05em;
   position: relative;
   width: auto;
 }
 
-a:after {
+.main-nav-links.active::after {
   bottom: 0;
   content: "";
   display: block;
@@ -12065,17 +12157,13 @@ a:after {
   width: 0;
 }
 
-a:hover:after {
+.main-nav-links.active::after {
   width: 100%;
   left: 0;
 }
 
 .header a:after {
   background: #2f2d2d;
-}
-
-footer a:after {
-  background: #ffffff;
 }
 
 section {
@@ -12116,7 +12204,7 @@ footer nav ul {
 
 section.big-quote {
   background: center/cover no-repeat url("/img/background_launch-test.png");
-  height: 30vh;
+  height: 100%;
 }
 @media (min-width: 576px) {
   section.big-quote {
@@ -12124,9 +12212,18 @@ section.big-quote {
   }
 }
 
+.typewriter {
+  margin-top: 18vh;
+}
+@media (min-width: 576px) {
+  .typewriter {
+    margin-top: 2.5vh;
+  }
+}
+
 section.big-quote blockquote {
   color: #f5fefa;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 @media (min-width: 576px) {
@@ -12171,7 +12268,6 @@ section.services .col {
   color: #012c3f;
   padding: 1.5rem;
   background-color: white;
-  z-index: 9;
 }
 @media (min-width: 576px) {
   section.services .col {
@@ -12251,7 +12347,6 @@ footer .powered-by {
 
 .thicker {
   font-weight: 600;
-  color: #376457;
 }
 
 .italic {
@@ -12274,6 +12369,7 @@ section.contact p.bigger,
 section.services p.bigger,
 .bigger {
   font-size: 1.4rem;
+  color: #376457;
 }
 
 section.services .bullets p,

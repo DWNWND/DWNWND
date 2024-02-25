@@ -1,10 +1,60 @@
 // Bootstrap main file
 @import "variables.scss";
+@import "typewriter.scss";
+@import "reveal.scss";
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/bootstrap/scss/variables";
 
-@import "typewriter.scss";
-@import "reveal.scss";
+//HAMBURGER MENu
+.hamburger-menu {
+  display: none;
+  box-shadow: 4px 4px 4px #49413421;
+}
+.dropdown {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  align-self: flex-end;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #cccccc;
+    margin: 4px;
+    transition: all 0.2s;
+  }
+  .top-bar {
+    transform: rotate(0);
+  }
+  .middle-bar {
+    opacity: 1;
+  }
+}
+
+input[type="checkbox"]:checked + label {
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
 
 //GLOBAL POSITIONING AND DISPLAY
 .margin-center-align {
@@ -35,12 +85,18 @@
   width: 100%;
   background-color: white;
   z-index: 10;
+
+  @include media-breakpoint-up(sm) {
+    // height: 160px;
+  }
 }
+
 .absolute {
   position: absolute;
   width: 100%;
   height: 85%;
-  top: 67.5vh;
+  top: 350px;
+  z-index: 1;
 
   @include media-breakpoint-up(sm) {
     top: 47.5vh;
@@ -67,11 +123,13 @@ img {
 /* HEADER */
 header {
   min-height: 100vh;
+  display: grid;
 }
 header .header {
   z-index: 10;
   padding: 1rem;
-  height: 70vh;
+  height: 350px;
+  // height: 60vh;
   min-height: 15rem;
   gap: 2rem;
 
@@ -81,10 +139,11 @@ header .header {
 }
 header .header-logo-container {
   width: 30vw;
-  max-width: 900px;
+  max-width: 100px;
 
   @include media-breakpoint-up(sm) {
     width: 40vw;
+    max-width: 900px;
   }
 }
 header .header-tagline {
@@ -119,19 +178,54 @@ nav li {
   list-style: none;
   font-weight: 200;
   width: auto;
+  white-space: nowrap;
 }
 
-nav.header ul {
+.mainmenu {
+  transition: opacity 1s linear;
+}
+
+.mainmenu li {
+  width: 130px;
+}
+.mainmenu .submenu li {
+  text-align: center;
+}
+
+nav.header ul.mainmenu {
   align-items: center;
   gap: 1rem;
+  flex-direction: column;
 
   @include media-breakpoint-up(sm) {
-    gap: 2rem;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-evenly;
+  }
+  @include media-breakpoint-up(md) {
+    justify-content: center;
   }
   @include media-breakpoint-up(lg) {
     gap: 3rem;
   }
 }
+
+nav.header ul.submenu {
+  flex-direction: column;
+}
+
+// .submenu-wrapper {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+// }
+
+// .submenu-wrapper .collapse {
+//   max-height: 100px;
+//   min-height: 100px;
+// }
 
 footer nav ul {
   gap: 0.2rem;
@@ -149,12 +243,37 @@ footer nav .fl-left a {
 }
 
 // LINK HOVER
+
+@media (hover) {
+  .main-nav-links:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .main-nav-links:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .sub-nav-link:hover {
+    // color: gray;
+    font-weight: 400;
+  }
+  footer a:after {
+    background: #ffffff;
+  }
+}
 a {
   letter-spacing: 0.05em;
   position: relative;
   width: auto;
 }
-a:after {
+.main-nav-links.active::after {
   bottom: 0;
   content: "";
   display: block;
@@ -164,16 +283,26 @@ a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after {
+
+.main-nav-links.active::after {
   width: 100%;
   left: 0;
 }
+
 .header a:after {
   background: #2f2d2d;
 }
-footer a:after {
-  background: #ffffff;
-}
+
+// a:hover:after {
+//   width: 100%;
+//   left: 0;
+// }
+// .header a:after {
+//   background: #2f2d2d;
+// }
+// footer a:after {
+//   background: #ffffff;
+// }
 
 // SECTIONS
 section {
@@ -215,15 +344,24 @@ footer nav ul {
 //BIG QUOTE
 section.big-quote {
   background: center / cover no-repeat url("/img/background_launch-test.png");
-  height: 30vh;
+  height: 100%;
 
   @include media-breakpoint-up(sm) {
     height: 50vh;
   }
 }
+
+.typewriter {
+  margin-top: 18vh;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 2.5vh;
+  }
+}
+
 section.big-quote blockquote {
   color: #f5fefa;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin: 0;
 
   @include media-breakpoint-up(sm) {
@@ -261,7 +399,6 @@ section.services .col {
   color: #012c3f;
   padding: 1.5rem;
   background-color: white;
-  z-index: 9;
 
   @include media-breakpoint-up(sm) {
     min-width: 250px;
@@ -333,7 +470,6 @@ footer .powered-by {
 }
 .thicker {
   font-weight: 600;
-  color: #376457;
 }
 .italic {
   font-style: italic;
@@ -353,6 +489,7 @@ section.contact p.bigger,
 section.services p.bigger,
 .bigger {
   font-size: 1.4rem;
+  color: #376457;
 }
 section.services .bullets p,
 section.services p,

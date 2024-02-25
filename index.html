@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="dist/css/styles.css" />
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="reveal.js"></script>
+    <script defer src="scroll.js"></script>
+    <script defer src="active.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet" />
@@ -17,15 +19,64 @@
   <body>
     <nav class="header absolute">
       <div class="sticky">
-        <ul>
-          <li><a href="#services" class="nav-link f-helvetica">services</a></li>
-          <li><a href="#projects" class="nav-link f-helvetica">projects</a></li>
-          <li><a href="#contact" class="nav-link f-helvetica">contact</a></li>
+        <div class="hamburger-menu">
+          <input id="dropdown" class="input-box" type="checkbox" style="display: none" />
+
+          <label for="dropdown" class="dropdown">
+            <span class="hamburger">
+              <span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+            </span>
+          </label>
+        </div>
+        <ul class="mainmenu" id="accordion">
+          <li>
+            <a class="nav-link main-nav-links f-helvetica thicker text-align-center" data-bs-toggle="collapse" href="#servicesMenuCollapse" role="button" aria-expanded="false" aria-controls="servicesMenuCollapse" id="serviceBtn">services</a>
+            <div class="collapse" id="servicesMenuCollapse" data-bs-parent="#accordion">
+              <ul class="submenu">
+                <li><a href="#services" class="nav-link sub-nav-link f-helvetica">services</a></li>
+                <li><a href="#packages" class="nav-link sub-nav-link f-helvetica">price</a></li>
+                <li><a href="#howitworks" class="nav-link sub-nav-link f-helvetica">how it works</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a class="nav-link main-nav-links f-helvetica thicker text-align-center" data-bs-toggle="collapse" href="#projectsMenuCollapse" role="button" aria-expanded="false" aria-controls="projectsMenuCollapse" id="projectsBtn">projects</a>
+            <div class="collapse" id="projectsMenuCollapse" data-bs-parent="#accordion">
+              <ul class="submenu">
+                <li><a href="#services" class="nav-link sub-nav-link f-helvetica">designs</a></li>
+                <li><a href="#packages" class="nav-link sub-nav-link f-helvetica">websites</a></li>
+                <li><a href="#howitworks" class="nav-link sub-nav-link f-helvetica">brand identity</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a class="nav-link main-nav-links f-helvetica thicker text-align-center" data-bs-toggle="collapse" href="#aboutMenuCollapse" role="button" aria-expanded="false" aria-controls="aboutMenuCollapse" id="aboutBtn">about</a>
+            <div class="collapse" id="aboutMenuCollapse" data-bs-parent="#accordion">
+              <ul class="submenu">
+                <li><a href="#services" class="nav-link sub-nav-link f-helvetica">our vision</a></li>
+                <li><a href="#packages" class="nav-link sub-nav-link f-helvetica">developers</a></li>
+                <li><a href="#packages" class="nav-link sub-nav-link f-helvetica">FAQ</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a class="nav-link main-nav-links f-helvetica thicker text-align-center" data-bs-toggle="collapse" href="#contactMenuCollapse" role="button" aria-expanded="false" aria-controls="contactMenuCollapse" id="contactBtn">contact</a>
+            <div class="collapse" id="contactMenuCollapse" data-bs-parent="#accordion">
+              <ul class="submenu">
+                <li><a href="#packages" class="nav-link sub-nav-link f-helvetica">inquire</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
     <header>
-      <div class="header">
+      <div class="header" id="topheader">
         <div class="header-tagline f-helvetica text-align-center"><span class="name">down wind</span></div>
         <div class="header-logo-container desktop"><img src="/img/logo_downwind_tight_gray_innershadow.svg" alt="" class="img-fluid margin-center-align" /></div>
         <div class="header-logo-container mobile"><img src="/img/logo_d_gray_innershadow.svg" alt="" class="img-fluid margin-center-align" /></div>
@@ -40,7 +91,7 @@
     </header>
     <main>
       <section class="services f-helvetica" id="services">
-        <h1>Services</h1>
+        <h1 class="thicker">Services</h1>
         <div class="container">
           <p class="bigger thicker text-align-center">Get a functional and finished website which is <span class="underline">yours only</span>,<span class="break"> without being locked to expensive DIY website builders and subscriptions.</span></p>
         </div>
@@ -88,7 +139,7 @@
         <img src="/img/amb_logo_smaller.png" alt="" class="work-img" />
       </div>
       <section class="projects gap-6" id="projects">
-        <h1 class="text-align-center">Projects</h1>
+        <h1 class="text-align-center thicker">Projects</h1>
         <div class="container">
           <div class="row" data-masonry='{"percentPosition": true }'>
             <div class="project-col col-sm-6 col-lg-4 mb-4">
@@ -138,7 +189,7 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <h1>Contact</h1>
+        <h1 class="thicker">Contact</h1>
         <div class="container">
           <div class="text-align-center legend margin-center-align gap-4 mb-5">
             <p>Want to get started?</p>
@@ -157,7 +208,7 @@
             </div>
 
             <legend class="bigger thicker">How do you prefer to communicate?</legend>
-            <div class="checkboxes d-flex flex-row align-items-center gap-4">
+            <!-- <div class="checkboxes d-flex flex-row align-items-center gap-4">
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="phoneCheck" />
                 <label class="form-check-label" for="phoneCheck">Phone</label>
@@ -174,7 +225,7 @@
                 <input type="checkbox" class="form-check-input" id="textmessageCheck" />
                 <label class="form-check-label" for="textmessageCheck">Textmessage</label>
               </div>
-            </div>
+            </div> -->
             <button type="submit" class="btn btn-secondary mt-4">Send inquiry</button>
           </form>
         </div>
