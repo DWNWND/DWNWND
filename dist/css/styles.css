@@ -12061,7 +12061,7 @@ nav li {
 }
 
 .mainmenu {
-  transition: opacity 1s linear;
+  box-shadow: 4px 4px 4px rgba(73, 65, 52, 0.1294117647);
 }
 
 .mainmenu li {

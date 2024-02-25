@@ -10,18 +10,18 @@ function hamburgerMenuOnScroll() {
   if (currentScrollPos > 350 && !checkbox.checked) {
     mainMenu.style.display = "none";
     hamburgerMenu.style.display = "block";
-    mainMenu.classList.add("pb-4");
+    mainMenu.classList.add("pb-4", "pt-4");
   }
   if (currentScrollPos > 350 && checkbox.checked) {
     mainMenu.style.display = "flex";
     hamburgerMenu.style.display = "block";
-    mainMenu.classList.add("pb-4");
+    mainMenu.classList.add("pb-4", "pt-4");
   }
   if (currentScrollPos < 350) {
     mainMenu.style.display = "flex";
     hamburgerMenu.style.display = "none";
     checkbox.checked = false;
-    mainMenu.classList.remove("pb-4");
+    mainMenu.classList.remove("pb-4", "pt-4");
   }
   prevScrollPos = currentScrollPos;
 }
