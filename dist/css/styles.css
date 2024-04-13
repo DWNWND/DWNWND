@@ -12279,6 +12279,14 @@ div .work-img {
   height: 47.5vh;
 }
 
+section.about {
+  background-color: #ebf2ff;
+}
+
+.imgOfMe {
+  width: 30%;
+}
+
 section.projects {
   background-color: #f5eee3;
 }
@@ -12405,6 +12413,10 @@ section h1, section .h1 {
 
 section.projects h1, section.projects .h1 {
   color: #c9c5af;
+}
+
+section.about h1, section.about .h1 {
+  color: #67669e;
 }
 
 section.contact h1, section.contact .h1 {
