@@ -6,6 +6,6 @@
 - 🔭 I’m currently working on **a collaborative open-source project** & some private projects 
 - 🌱 I’m currently learning about **databases**
 - 👯 I’m looking to collaborate on **new and upcoming projects**
-- 👨‍💻 All of my projects are available at [dwnwnd.com](dwnwnd.com)
+- 👨‍💻 All of my projects are available at ....
 - 💬 Ask me about **where i am**
 - 📫 Reach me at **thea.ol@hotmail.com**
