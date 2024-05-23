@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Thea</h1>
 <p align="center">˚₊‧꒰ა 🎀 ໒꒱ ‧₊˚</p>
 
-<h3 align="center">A passionate frontend developer and UI/UX designer from Oslo, Norway.</h3>
+<h3 align="center">I'm a passionate frontend developer from Oslo, Norway.</h3>
 
 - 🔭 I’m currently working on **a collaborative open-source project** & some private projects 
 - 🌱 I’m currently learning about **databases**
