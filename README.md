@@ -21,6 +21,13 @@
   
 💬 Or add me on [LinkedIn](https://www.linkedin.com/in/thea-oland-b38175139/)
 
+## Fun facts:
+- Has a masters in urban planning and is freelancing as a side hustle to my frontend studies
+- Lived on a sailboat in the Mediterranean for two years
+- Is currently planning on settling in Chiang Mai, Thailand
+- Have been to Zhangjiajie National Forest Park
+
+
 
 
 
