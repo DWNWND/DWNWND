@@ -23,6 +23,7 @@
 
 ## Fun facts about me:
 - Has a masters in urban planning and is freelancing as a side hustle to my frontend studies
+- Is a professional suana master
 - Lived on a sailboat in the Mediterranean for two years
 - Is currently planning on settling in Chiang Mai, Thailand
 - Have been to Zhangjiajie National Forest Park
