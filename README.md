@@ -13,7 +13,7 @@
   
 👾 Working on **a online buisness website**
   
-🚀 Working on **my portefolio**
+🚀 Working on **my portfolio**
 
 ## I'm open for inquiries:
 
