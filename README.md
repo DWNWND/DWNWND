@@ -11,9 +11,9 @@
 
 🌱 Learning about **databases**
   
-👾 Working on **a online buisness website**
+👾 Privately working on **a online buisness website**
   
-🚀 Working on **my portfolio**
+🚀 Launching **my portfolio**
 
 ## I'm open for inquiries:
 
