@@ -1,6 +1,6 @@
 <h1 align="center">Hi, I'm Thea</h1>
 
-<h2 align="center">I'm a frontend developer from Oslo, Norway.<br></h2>
+<h2 align="center">I'm a certified front-end developer with a background in urban planning.<br></h2>
 
 
 ## I'm currently:
