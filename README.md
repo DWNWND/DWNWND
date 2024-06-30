@@ -2,6 +2,7 @@
 
 <h2 align="center">I'm a certified front-end developer with a background in urban planning.<br></h2>
 
+[![linkedin-header](https://github.com/DWNWND/DWNWND/assets/126068161/4035fe4b-8abb-40a3-8808-27cdbb9d68fd)](https://dwnwnd.com/)
 
 ## I'm currently:
 
@@ -27,4 +28,3 @@
 - Lived on a sailboat in the Mediterranean for two years
 
 
-[![linkedin-header](https://github.com/DWNWND/DWNWND/assets/126068161/4035fe4b-8abb-40a3-8808-27cdbb9d68fd)](https://dwnwnd.com/)
