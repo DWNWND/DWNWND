@@ -13,7 +13,7 @@
   
 👾 Privately working on **a online buisness website**
   
-🚀 Challanging my self to use at least one AI tool everyday
+🚀 Challanging my self to use at least one **AI tool** everyday
 
 ## I'm open for inquiries:
 
