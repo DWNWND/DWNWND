@@ -13,7 +13,7 @@
   
 👾 Privately working on **a online buisness website**
   
-🚀 Expanding my knowledge on how to use AI
+🚀 Challanging my self to use at least one AI tool everyday
 
 ## I'm open for inquiries:
 
@@ -23,13 +23,8 @@
 
 ## Fun facts about me:
 - Has a masters in urban planning and is freelancing as a side hustle to my frontend studies
-- Is a professional suana master
+- Have worked as a professional suana master
 - Lived on a sailboat in the Mediterranean for two years
 
 
-
-
-
-<h3 align="center">Portfolio: https://dwnwnd.com/
-<br><br>˚₊‧꒰ა 🎀 ໒꒱ ‧₊˚</h3>
-
+[![linkedin-header](https://github.com/DWNWND/DWNWND/assets/126068161/4035fe4b-8abb-40a3-8808-27cdbb9d68fd)](https://dwnwnd.com/)
