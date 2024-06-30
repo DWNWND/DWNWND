@@ -13,7 +13,7 @@
   
 👾 Privately working on **a online buisness website**
   
-🚀 Expanding my knowledge of how to use AI
+🚀 Expanding my knowledge on how to use AI
 
 ## I'm open for inquiries:
 
