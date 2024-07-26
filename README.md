@@ -18,7 +18,7 @@
 
 ## I'm open for inquiries:
 
-📫 Reach me at **thea.ol@hotmail.com**
+📫 Reach me at **thea@dwnwnd.com**
   
 💬 Or add me on [LinkedIn](https://www.linkedin.com/in/thea-oland-b38175139/)
 
