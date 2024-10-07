@@ -1,6 +1,8 @@
 <h1 align="center">Hi, I'm Thea</h1>
-
-<h2 align="center">A front-end developer. Learing coding so i'll be able to execute all my own ideas.<br></h2>
+<br>
+<h2 align="center">A front-end developer.</h2>
+<h3 align="center">Learing coding so i'll be able to execute all my ideas.</h3>
+<br>
 
 ## I'm currently:
 
