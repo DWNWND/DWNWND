@@ -1,6 +1,6 @@
 <h1 align="center">Hi, I'm Thea</h1>
 
-<h2 align="center">I'm a certified front-end developer with a background in urban planning.<br></h2>
+<h2 align="center">A front-end developer. Learing coding so i'll be able to execute all my own ideas.<br></h2>
 
 [![linkedin-header](https://github.com/DWNWND/DWNWND/assets/126068161/4035fe4b-8abb-40a3-8808-27cdbb9d68fd)](https://dwnwnd.com/)
 
@@ -8,9 +8,9 @@
 
 🌱 Studying frontend development at Noroff
 
-🌱 Working on **a collaborative open-source project**
+🌱 Working on **my final exam**
 
-🌱 Learning about **databases**
+🌱 Learning about **frameworks**
   
 👾 Privately working on **a online buisness website**
   
@@ -22,9 +22,7 @@
   
 💬 Or add me on [LinkedIn](https://www.linkedin.com/in/thea-oland-b38175139/)
 
-## Fun facts about me:
-- Has a masters in urban planning and is freelancing as a side hustle to my frontend studies
-- Have worked as a professional suana master
+## Fun fact about me:
 - Lived on a sailboat in the Mediterranean for two years
 
 
