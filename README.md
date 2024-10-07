@@ -2,8 +2,6 @@
 
 <h2 align="center">A front-end developer. Learing coding so i'll be able to execute all my own ideas.<br></h2>
 
-[![linkedin-header](https://github.com/DWNWND/DWNWND/assets/126068161/4035fe4b-8abb-40a3-8808-27cdbb9d68fd)](https://dwnwnd.com/)
-
 ## I'm currently:
 
 🌱 Studying frontend development at Noroff
