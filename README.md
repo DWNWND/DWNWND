@@ -1,20 +1,18 @@
 <h1 align="center">Hi, I'm Thea</h1>
 <br>
 <h2 align="center">A front-end developer.</h2>
-<h3 align="center">Learing coding so i'll be able to execute all my ideas.</h3>
+<h3 align="center">Learing coding so I can build all my ideas!</h3>
 <br>
 
 ## I'm currently:
 
 🌱 Studying frontend development at Noroff
 
-🌱 Working on **my final exam**
-
-🌱 Learning about **frameworks**
+🌱 Working on **my portfolio**
   
-👾 Privately working on **a online buisness website**
+👾 Privately working on **a online buisness**
   
-🚀 Challanging my self to use at least one **AI tool** everyday
+🚀 Challanging my self to learn more about **AI**
 
 ## I'm open for inquiries:
 
@@ -23,6 +21,6 @@
 💬 Or add me on [LinkedIn](https://www.linkedin.com/in/thea-oland-b38175139/)
 
 ## Fun fact about me:
-- Lived on a sailboat in the Mediterranean for two years
+- I want to run my own buisness.
 
 
