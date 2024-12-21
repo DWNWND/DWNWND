@@ -20,6 +20,8 @@
   
 💬 Or add me on [LinkedIn](https://www.linkedin.com/in/thea-oland-b38175139/)
 
+My front end services: [devThea]([https://www.linkedin.com/in/thea-oland-b38175139/](https://devthea.netlify.app/)) 
+
 ## Fun fact about me:
 - I lived a sailboat in the mediterranean while studying to become a front end developer.
 
