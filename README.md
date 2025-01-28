@@ -5,7 +5,7 @@
 
 ## I'm currently:
 
-🌱 Finished my front end development studies at Noroff (december 2024).
+🌱 Finished my front end development studies at Noroff with straight As (december 2024).
   
 👾 Building my own **a startup**
   
