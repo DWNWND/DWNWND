@@ -7,9 +7,7 @@
 
 🌱 Finished my front end development studies at Noroff with straight As (december 2024).
   
-👾 Building my own **a startup**
-  
-🚀 Challanging my self to learn more about **AI**
+🚀 Building my own **a startup**
 
 ## I'm open for inquiries:
 
